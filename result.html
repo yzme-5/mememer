@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>真棒</title>
+  <style>
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      background:#f7f7f7;
+    }
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:24px;
+      box-sizing:border-box;
+    }
+    .card{
+      width:min(520px, 92vw);
+      background:#fff;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      text-align:center;
+    }
+    img{
+      width:320px;
+      max-width:90%;
+      height:auto;
+      display:block;
+      margin:0 auto;
+      border-radius:12px;
+    }
+    .great{
+      margin-top:18px;
+      font-size:28px;
+      font-weight:900;
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:14px;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .08s ease, background .15s ease;
+    }
+    .great:hover{
+      background:#f0f0f0;
+      transform: translateY(-1px);
+    }
+    .tip{
+      margin-top:10px;
+      font-size:13px;
+      color:#666;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <!-- 新页面中间插入 cat.jpg -->
+      <img src="images/cat.jpg" alt="cat" />
+
+      <!-- 图片下方互动文字 真棒！ -->
+      <div id="back" class="great">真棒！</div>
+      <div class="tip">点击“真棒！”返回上一页</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("back").addEventListener("click", () => {
+      // 返回首页
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
